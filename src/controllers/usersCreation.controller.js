@@ -82,7 +82,8 @@ const userLogin = asyncHandler(async (req, res) => {
 
     const options = {
         httpOnly: true,
-        sameSite: "Strict",
+        sameSite: "None",
+        secure: true,
     };
 
     // If no token is found in cookies, set new cookies
