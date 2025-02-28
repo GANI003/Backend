@@ -7,7 +7,7 @@ import texts from './routes/text.routes.js';
 const app = express()
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Frontend URL (React app running on localhost:3000
+    origin: '*', // Frontend URL (React app running on localhost:3000
     credentials: true
 }));
 
