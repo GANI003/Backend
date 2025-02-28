@@ -7,9 +7,12 @@ import texts from './routes/text.routes.js';
 const app = express()
 
 app.use(cors({
-    origin: '*', // Frontend URL (React app running on localhost:3000
-    credentials: true
+  origin: 'https://safe-sync.netlify.app', 
+  credentials: true, 
+  methods: 'GET,POST,PUT,DELETE', 
+  allowedHeaders: 'Content-Type,Authorization', 
 }));
+
 
 app.use(express.json({limit: "16mb"}))
 app.use(express.urlencoded({extended: true, limit: "16mb"}))
