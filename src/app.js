@@ -7,7 +7,7 @@ import texts from './routes/text.routes.js';
 const app = express()
 
 app.use(cors({
-  origin: *, 
+  origin: '*', 
   credentials: true,
 }));
 
