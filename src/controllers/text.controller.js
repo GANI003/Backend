@@ -51,7 +51,7 @@ const createTextFile = asyncHandler( async (req,res) => {
                 title : textName,
                 user,
                 version : {
-                    url : file_url.url,
+                    url : file_url,
                     createdTime : format(new Date() , 'MMMM dd, yyyy h:mm:ss a'),
                 }
             }
@@ -75,7 +75,7 @@ const versionTheFile = asyncHandler( async (req,res) => {
         {
             $push : {
                 version : {
-                    url : fileUrl.url,
+                    url : fileUrl,
                     createdTime : format(new Date() , 'MMMM dd, yyyy h:mm:ss a'),
             }       
         }
