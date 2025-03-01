@@ -130,7 +130,7 @@ const createFile = asyncHandler(async (req,res) => {
         const filePath = await req.file?.path;
         console.log(filePath);
         const file_url = await uploadOnCloudinary(filePath);
-        console.log(file_url);
+        // console.log(file_url);
         // if(parentFolder === "")
         // {
         // const fileName = await Folder
@@ -148,7 +148,7 @@ const createFile = asyncHandler(async (req,res) => {
         if(fileDataExist !== null)
         {
             console.log(`file with this ${title} is already exist`);
-            deleteUploaded(file_url.url);
+            deleteUploaded(file_url);
             return res.json({err:`file with this ${title} is already exist`,status : 400})
         }
         else
