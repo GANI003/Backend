@@ -160,7 +160,7 @@ const createFile = asyncHandler(async (req,res) => {
                 {
                 $push :  { files : {
                         subTitle : `${title}.user.${req.user._id}`,
-                        url : file_url.url,
+                        url : file_url,
                     }}
                 }
             )   
