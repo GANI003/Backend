@@ -122,7 +122,7 @@ const createFile = asyncHandler(async (req,res) => {
                     type : "file",
                     title : `${title}.user.${req.user._id}`,
                     user  : `${req.user._id}`,
-                    Url : file_url.url,
+                    Url : file_url,
                 }
             )
             return res.json(outsideFile);
