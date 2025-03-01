@@ -130,6 +130,7 @@ const createFile = asyncHandler(async (req,res) => {
         const filePath = await req.file?.path;
         console.log(filePath);
         const file_url = await uploadOnCloudinary(filePath);
+        console.log(file_url);
         // if(parentFolder === "")
         // {
         // const fileName = await Folder
